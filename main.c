@@ -11,7 +11,7 @@ int isEmpty(struct fila *head);
 int main()
 {
     struct fila *head = NULL;
-    struct fila *tail = NULL;
+	struct fila *tail = NULL;
     
     int tempo_espera = 0, tempo_resposta = 0, tempo_ativo = 0, tempo_chegada = 0, tempo_necessario = 0, quant_processos, total = 0, contador = 0, quantum = 0;
     float media_espera, media_resposta, media_ativo;
@@ -28,7 +28,7 @@ int main()
 
     struct fila *aux = head;
     
-    for (total = 0; processos != 0;)  {
+    while (processos != 0) {
 
         if (aux->tempo_necessario <= quantum && aux->tempo_necessario > 0) {
             total = total + aux->tempo_necessario;
@@ -78,7 +78,7 @@ void adicionando(struct fila **head, struct fila **tail, int a, int b)
 			*head = novo;
 			*tail = novo;
 		}
-        else {
+                else {
 			(*tail)->next = novo;
 			*tail = novo;
 		}
