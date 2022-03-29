@@ -11,7 +11,7 @@ int isEmpty(struct fila *head);
 int main()
 {
     struct fila *head = NULL;
-	struct fila *tail = NULL;
+    struct fila *tail = NULL;
     
     int tempo_espera = 0, tempo_resposta = 0, tempo_ativo = 0, tempo_chegada = 0, tempo_necessario = 0, quant_processos, total = 0, contador = 0, quantum = 0;
     float media_espera, media_resposta, media_ativo;
